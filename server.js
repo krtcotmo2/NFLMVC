@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const log = console.log;
 let PORT = process.env.PORT || 8080;
-const routes = require('./controllers/draftController,js');
+const routes = require('./controllers/draftController.js');
 const exphbs = require("express-handlebars");
 let app = express();
 

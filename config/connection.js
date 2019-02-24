@@ -5,7 +5,7 @@ let connection;
 if (process.env.JAWSDB_URL) {
      connection = mySQL.createConnection(process.env.JAWSDB_URL);
 } else {
-     connection = mySQL.createConnection(keys.sqlKeys);
+     connection =  mySQL.createConnection(keys.sqlKeys);
 }
 
 //make connection
