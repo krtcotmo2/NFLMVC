@@ -6,7 +6,7 @@ connection = require("../config/connection");
 const player = require("../models/player");
 
 router.get("/", function(req, res){
-     res.render("draftboard", {title:"NFL DRAFT"});
+     res.render("draftBoard", {title:"NFL DRAFT"});
 })
 
 
