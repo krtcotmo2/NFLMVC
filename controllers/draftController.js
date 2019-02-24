@@ -20,7 +20,7 @@ router.get("/addRinger", function(req, res){
      res.render("addRinger");
 })
 router.get("/editPlayer", function(req, res){
-     res.render("addRinger");
+     res.render("editPlayer");
 })
 
 router.post("/resetAll", function(req, res){
