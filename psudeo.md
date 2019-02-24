@@ -19,7 +19,7 @@
 - Increments the round/pick number
 - Moves current team to bottom of the queue and loads the next team to be on the clock.
 
-#Add a Ringer Page
+# Add a Ringer Page
 Don't like what you see left on the board. Go to this page to add a custom player and then draft them.
 
 ### On form submit
@@ -28,7 +28,7 @@ Don't like what you see left on the board. Go to this page to add a custom playe
 - redirect to the draft board
 
 # Update a Player Page (hope to get to this)
-So you didnt get the palyer you wnated bcause your rival drafted them first, pull a fast one and change the rating of the player
+So you didn't get the palyer you wnated bcause your rival drafted them first, pull a fast one and change the rating of the player
 
 - Page shows list of drafted players
 - click on player to load their rating score
