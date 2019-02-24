@@ -12,6 +12,11 @@ const exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+
+let routes = require('./controllers/draftController');
+app.use("/", routes);
+
+
 app.listen(PORT, function(err){
      if(err) log(err);
      log("connected on " + PORT);
