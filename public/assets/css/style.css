@@ -2,5 +2,54 @@
 .colHolder{
      padding:12px;
      border:1px solid black;
+     height: calc(100vh - 86px);
+     
+}
+body, html{
+     height: 100vh !important;
+}
+.avPlayerScroller{
+     height:calc(100% - 100px);
+     position: relative;
+     overflow-y: auto;
+}
 
+.filterHolder{   
+     background: white;
+     border-bottom: 1px solid #6a6a6a;
+}
+.playerHolder{
+     border:1px solid #ccc;
+     padding:12px;
+     position: relative;
+     display: flex;
+     justify-content: space-between;
+     cursor:pointer;
+     margin-bottom:12px;
+}
+.playerHolder:hover{
+     background: #ccc
+}
+.playerHolder img{
+     height:60px;
+}
+.deets{
+     display: flex;  
+     justify-content: start;
+}
+.playerName{
+     margin-right:12px;
+     font-weight: bold;
+}
+.rating{
+     position: relative;
+     right:0px;
+     width:60px;
+     height: 60px;
+     border:solid rgb(34, 141, 202) 1px;
+     background: white;
+     text-align: center;
+     line-height: 48px;
+     font-size: 36px;
+     font-weight: bold;
 }
