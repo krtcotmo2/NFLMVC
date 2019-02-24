@@ -8,7 +8,7 @@ let app = express();
 
 app.use(express.urlencoded( {extended:true} ));
 app.use(express.json());
-app.use("/public", express.static(__dirname +"/public"));
+app.use("/", express.static(__dirname +"/"));
 app.use("public", routes);
 //app.use("/", express.static(__dirname + "/"));
 //app.use("/", routes);
