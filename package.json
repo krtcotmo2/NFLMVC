@@ -1,0 +1,26 @@
+{
+  "name": "nfl-draft",
+  "version": "1.0.0",
+  "description": "Lists players available, teams in the queue and show drafted players. Can add ringers or modify players.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "watch": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krtcotmo2/NFLMVC.git"
+  },
+  "author": "Kurt COoney\u001b[D\u001b[D\u001b[D\u001b[o",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/krtcotmo2/NFLMVC/issues"
+  },
+  "homepage": "https://github.com/krtcotmo2/NFLMVC#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.1",
+    "mysql": "^2.16.0"
+  }
+}
