@@ -8,4 +8,5 @@ router.get("/", function(req, res){
      res.render("draftboard", {title:"NFL DRAFT"});
 })
 
+
 module.exports = router;
