@@ -1,4 +1,5 @@
-const sql = require("mysql");
+require("dotenv").config();
+const mySQL = require("mysql");
 const keys = require("./keys");
 let connection;
 
