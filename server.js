@@ -18,6 +18,6 @@ app.use("/", routes);
 
 
 app.listen(PORT, function(err){
-     if(err) log(err);
+     if(err) log("loe error" + err);
      log("connected on " + PORT);
 })
