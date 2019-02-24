@@ -8,8 +8,8 @@ let app = express();
 
 app.use(express.urlencoded( {extended:true} ));
 app.use(express.json());
-app.use(express.static("/public"));
-app.use("/public", routes);
+app.use(express.static("public"));
+app.use("/", routes);
 //app.use("/", express.static(__dirname + "/"));
 //app.use("/", routes);
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
