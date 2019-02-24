@@ -2,7 +2,7 @@
 ### On Page load
 
 - Connect to sql db and get all teams by draft order
-- Connect tl sql db and get all players not yet drafted and drafted
+- Connect to sql db and get all players not yet drafted and drafted
 - Based on number of players drafted, determine current team on the clock on show that team plus next three
 - Show players still eligible for the draft on the left
 - Show drafted players on the right
@@ -28,14 +28,14 @@ Don't like what you see left on the board. Go to this page to add a custom playe
 - redirect to the draft board
 
 # Update a Player Page (hope to get to this)
-So you didn't get the palyer you wnated bcause your rival drafted them first, pull a fast one and change the rating of the player
+So you didn't get the player you wanted because your rival drafted them first, pull a fast one and change the rating of the player
 
 - Page shows list of drafted players
 - click on player to load their rating score
-- edit the score and clcik save
+- edit the score and click save
 - update player in db
 - redirects to draft board
 
 # Nice to Haves
-- filter by position in teh draft board
+- filter by position in the draft board
 - sort by ratings
