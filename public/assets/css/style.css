@@ -37,6 +37,9 @@ body, html{
      display: flex;  
      justify-content: start;
 }
+.pos{
+     margin-right:12px;
+}
 .playerName{
      margin-right:12px;
      font-weight: bold;
