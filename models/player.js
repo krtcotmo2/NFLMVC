@@ -12,7 +12,7 @@ let player = {
           })
      },
      addPlayer:function(cols, vals, cb){
-          orm.addPlayer("players", cols, function(res){
+          orm.addPlayer("players", cols, vals, function(res){
                cb(res);
           });       
      }

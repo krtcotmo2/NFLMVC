@@ -5,14 +5,22 @@ connection = require("../config/connection");
 //add player model so that the api calls can update the data
 const player = require("../models/player");
 
+
+
 router.get("/", function(req, res){
      player.all(function(data){
           let playersArray = {
                players:data
           }
-          console.log(playersArray)
           res.render("draftBoard", {title:"NFL DRAFT", players:data});
      })
+})
+
+router.get("/addRinger", function(req, res){
+     res.render("addRinger");
+})
+router.get("/editPlayer", function(req, res){
+     res.render("addRinger");
 })
 
 router.post("/resetAll", function(req, res){
@@ -20,4 +28,12 @@ router.post("/resetAll", function(req, res){
           return res.send(data);
      })
 })
+
+router.post("/addRinger", function(req, res){
+     player.addPlayer(["name", "prating", "position"], [req.body.name, req.body.prating, req.body.position], function(data){
+          res.render('draftBoard');
+
+     })
+})
+
 module.exports = router;

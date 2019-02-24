@@ -1,0 +1,39 @@
+<div class="contianer">
+     <div class="row col-10 mx-auto">
+          <form class="col-4 addPlayer">
+               <div class="form-group">
+                    <label for="tboxName">Name</label>
+                    <input type="text" class="form-control" id="tboxName"  required/>
+               </div>
+               <div class="form-group">
+                    <label for="cboxPos">Position</label>
+                    <select class="custom-select mr-sm-2" id="cboxPos" required>
+                         <option value="QB">QB</option>
+                         <option value="RB">RB</option>
+                         <option value="FB">FB</option>
+                         <option value="WR">WR</option>
+                         <option value="TE">TE</option>
+                         <option value="OG">OG</option>
+                         <option value="OT">OT</option>
+                         <option value="C">C</option>
+                         <option value="DE">DE</option>
+                         <option value="DT">DT</option>
+                         <option value="LB">LB</option>
+                         <option value="S">S</option>
+                         <option value="CB">CB</option>
+                         <option value="P">P</option>
+                         <option value="K">K</option>
+                    </select>
+               </div>
+               <div class="form-group">
+                    <label for="tboxRating">Rating</label>
+                    <input type="number" class="form-control" id="tboxRating"  min="1" max="100" required/>
+               </div>
+               <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+     </div>
+</div>
+<script src='https://code.jquery.com/jquery-3.3.1.min.js'
+          integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous'></script>
+     
+<script src="../public/assets/scripts/draftboard.js"></script>

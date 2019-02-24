@@ -14,8 +14,8 @@ app.use(express.json());
 //app.use("/", routes);
 app.use("/", express.static(__dirname + "/"));
 app.use("/", draftroutes);
-app.use("/", addroutes);
-app.use("/", updateRoutes);
+//app.use("/", addroutes);
+//app.use("/", updateRoutes);
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
