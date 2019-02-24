@@ -15,7 +15,7 @@ app.use("/", routes);
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-app.listen(PORT, function(err){
-     if(err) log("loe error" + err);
+app.listen(process.env.PORT || 8080, function(err){
+     if(err) log("log error" + err);
      log("connected on " + PORT);
 })
