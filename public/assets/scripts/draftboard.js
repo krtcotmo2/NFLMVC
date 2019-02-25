@@ -8,7 +8,6 @@ $(".btnReset").on("click", function(){
 
 $(".addPlayer").on("submit", function(evt){
      event.preventDefault();
-
      vals = {
           name: $("#tboxName").val().trim(),
           prating: $("#tboxRating").val().trim(),
@@ -20,5 +19,10 @@ $(".addPlayer").on("submit", function(evt){
      }).catch(function(err){
           console.log(err);
      })
-     
 })
+$(document).on("click", ".playerHolder", function(){
+     $(".playerHolder").removeClass("selected");
+     $(".curSelection").html($(this).html());
+     $(this).addClass("selected");
+})
+

@@ -9,10 +9,16 @@ const player = require("../models/player");
 
 router.get("/", function(req, res){
      player.all(function(data){
-          let playersArray = {
-               players:data
-          }
-          res.render("draftBoard", {title:"NFL DRAFT", players:data});
+          let avail = data.filter( o=>{
+               return o.draftedBy == null;
+          })
+          let drafted = data.filter( o=>{
+               return o.draftedBy != null;
+          })
+          player.allTeams(function(data){
+               console.log(data);
+               res.render("draftBoard", {title:"NFL DRAFT", players:avail, drafted : drafted, draftOrder:data});
+          });
      })
 })
 
