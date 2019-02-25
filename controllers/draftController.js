@@ -20,7 +20,6 @@ router.get("/", function(req, res){
                console.log(data);
                res.render("draftBoard", {title:"NFL DRAFT", players:avail, drafted : drafted, draftOrder:data});
           });
-          
      })
 })
 
@@ -40,7 +39,6 @@ router.post("/resetAll", function(req, res){
 router.post("/addRinger", function(req, res){
      player.addPlayer(["name", "prating", "position"], [req.body.name, req.body.prating, req.body.position], function(data){
           res.render('draftBoard');
-
      })
 })
 
