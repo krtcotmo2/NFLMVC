@@ -12,8 +12,8 @@ function printQuestionMarks(num) {
 
 
 let orm = {
-     all : function (tableName, cb){
-          let query = `SELECT * FROM ${tableName}`;
+     all : function (tableName, colName, cb){
+          let query = `SELECT * FROM ${tableName} ORDER BY ${colName}`;
           connection.query(query, function(err, data){
                if(err) throw err;
                cb(data);

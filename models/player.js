@@ -2,7 +2,12 @@ let  orm = require("../config/orm.js");
 
 let player = {
      all:function(cb){
-          orm.all("players", function(data){
+          orm.all("v_player_draft", "playerid", function(data){
+               cb(data);
+          })
+     },
+     allTeams:function(cb){
+          orm.all("teams", "draftOrder", function(data){
                cb(data);
           })
      },

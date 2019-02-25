@@ -8,7 +8,6 @@
                     {{#each players }}
                          <div class="playerHolder">   
                                <div class='deets'>
-                                    {{#if draftedBy}}<img src="../public/assets/images/af.png"/>{{/if}}
                                    <span class="playerName">{{name}}</span>
                                    <span class="pos">{{position}}</span>
                                </div>                          
@@ -17,12 +16,40 @@
                     {{/each}}
                </div>
           </div>
-          <div class="colHolder col-4">Team on the clock
+          <div class="colHolder col-4 px-5">
+               <h1 style="margin-top:40px; text-align:center;">On the Clock</h1>
+               <h3>Round: <spanc class="rndNum"></span></h3>
+               <h5>Pick: <spanc class="pickNum"></span></h5>
+               <div class="curSelection"></div>
+               <button class="btn btn-secondary w-100 mb-4">Draft Player</button>
+               {{#each draftOrder }}
+                    <div class="draftedHolder">   
+                         <div class='deets'>
+                              <img src="../public/assets/images/{{logo}}"/>
+                              <span class="playerName">{{teamName}}</span>
+                         </div>                                                   
+                    </div>
+               {{/each}}
                <button class="btnReset">Reset All</button>
           </div>
-          <div class="colHolder col-4">Drafted Players</div>
+          <div class="colHolder col-4">
+               <h1 style="margin-top:40px;">Drafted Players</h1>   
+               <div class="avPlayerScroller">            
+                    {{#each drafted }}
+                         <div class="draftedHolder">   
+                                   <div class='deets'>
+                                        {{#if draftedBy}}<img src="../public/assets/images/{{logo}}"/>{{/if}}
+                                   <span class="playerName">{{name}}</span>
+                                   <span class="pos">{{position}}</span>
+                                   </div>                          
+                              <span class="rating" style="color:rgb(34, 141, 202) !important;">{{prating}}</span>
+                         </div>
+                    {{/each}}
+               </div>
+          </div>
      </div>
 </div>
+
 <script src='https://code.jquery.com/jquery-3.3.1.min.js'
           integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous'></script>
      

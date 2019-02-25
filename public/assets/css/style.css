@@ -1,7 +1,6 @@
 .nav-item{font-size: 1.4em}
 .colHolder{
      padding:12px;
-     border:1px solid black;
      height: calc(100vh - 86px);
      
 }
@@ -12,25 +11,28 @@ body, html{
      height:calc(100% - 100px);
      position: relative;
      overflow-y: auto;
+     padding:12px;
+     border:1px solid #bababa;
 }
 
 .filterHolder{   
      background: white;
-     border-bottom: 1px solid #6a6a6a;
+
 }
-.playerHolder{
+.playerHolder, .curSelection, .draftedHolder{
      border:1px solid #ccc;
      padding:12px;
      position: relative;
      display: flex;
      justify-content: space-between;
-     cursor:pointer;
+     
      margin-bottom:12px;
 }
 .playerHolder:hover{
+     cursor:pointer;
      background: #ccc
 }
-.playerHolder img{
+.draftedHolder img{
      height:60px;
 }
 .deets{
@@ -55,4 +57,7 @@ body, html{
      line-height: 48px;
      font-size: 36px;
      font-weight: bold;
+}
+.selected{
+     background: #ccc
 }
