@@ -19,7 +19,6 @@ router.get("/", function(req, res){
           player.allTeams(function(data){
                res.render("draftBoard", {title:"NFL DRAFT", players:avail, drafted : drafted, draftOrder:data});
           });
-          
      })
 })
 router.get("/getPlayer/:id", function(req, res){
@@ -46,7 +45,6 @@ router.post("/resetAll", function(req, res){
 router.post("/addRinger", function(req, res){
      player.addPlayer(["name", "prating", "position"], [req.body.name, req.body.prating, req.body.position], function(data){
           res.render('draftBoard');
-
      })
 })
 
