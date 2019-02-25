@@ -15,10 +15,12 @@ router.get("/", function(req, res){
           let drafted = data.filter( o=>{
                return o.draftedBy != null;
           })
+          /*
           player.allTeams(function(data){
                console.log(data);
-               res.render("draftBoard", {title:"NFL DRAFT", players:avail, drafted : drafted, draftOrder:data});
           });
+          */
+          res.render("draftBoard", {title:"NFL DRAFT", players:avail, drafted : drafted, draftOrder:data});
      })
 })
 
