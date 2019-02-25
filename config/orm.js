@@ -26,6 +26,13 @@ let orm = {
                cb(data);
           })
      },
+     getOne:function(playerid, cb){
+          let query =   `SELECT * FROM players WHERE playerid = ${playerid}`;
+          connection.query(query, function(err, data){
+               if(err) throw err;
+               cb(data);
+          })
+     },
      addPlayer : function(table, cols, vals, cb) {
           var queryString = "INSERT INTO " + table;
           queryString += " (";
@@ -40,7 +47,14 @@ let orm = {
             }
             cb(result);
           });
-        },
+     },
+     update:function(tableName, colName,  colval, playerid, cb){
+          let query =   `UPDATE ${tableName} SET ${colName} = ${colval}  WHERE playerid = ${playerid}`;
+          connection.query(query, function(err, data){
+               if(err) throw err;
+               cb(data);
+          })
+     }
 }
 
 module.exports = orm;

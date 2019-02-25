@@ -1,8 +1,13 @@
 let  orm = require("../config/orm.js");
 
 let player = {
-     all:function(cb){
-          orm.all("v_player_draft", "playerid", function(data){
+     all:function(orderby, cb){
+          orm.all("v_player_draft", orderby, function(data){
+               cb(data);
+          })
+     },
+     getOne:function(playerid, cb){
+          orm.getOne(playerid, function(data){
                cb(data);
           })
      },
@@ -20,6 +25,12 @@ let player = {
           orm.addPlayer("players", cols, vals, function(res){
                cb(res);
           });       
+     },
+     update:function(cols, vals, playerid, cb){
+          console.log(cols,vals,playerid )
+          orm.update("players", cols, vals, playerid, function(res){
+               cb(res);
+          });
      }
 }
 module.exports = player;

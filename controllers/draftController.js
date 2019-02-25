@@ -8,7 +8,7 @@ const player = require("../models/player");
 
 
 router.get("/", function(req, res){
-     player.all(function(data){
+     player.all("playerid", function(data){
           let avail = data.filter( o=>{
                return o.draftedBy == null;
           })
@@ -17,17 +17,23 @@ router.get("/", function(req, res){
           })
           
           player.allTeams(function(data){
-               console.log(data);
                res.render("draftBoard", {title:"NFL DRAFT", players:avail, drafted : drafted, draftOrder:data});
           });
      })
 })
-
+router.get("/getPlayer/:id", function(req, res){
+     let playID = req.params.id;
+     player.getOne(playID, function(data){
+          res.json(data);
+     })     
+})
 router.get("/addRinger", function(req, res){
      res.render("addRinger");
 })
 router.get("/editPlayer", function(req, res){
-     res.render("editPlayer");
+     player.all("name", function(data){
+          res.render("editPlayer", {players:data});
+     })
 })
 
 router.post("/resetAll", function(req, res){
@@ -39,6 +45,13 @@ router.post("/resetAll", function(req, res){
 router.post("/addRinger", function(req, res){
      player.addPlayer(["name", "prating", "position"], [req.body.name, req.body.prating, req.body.position], function(data){
           res.render('draftBoard');
+     })
+})
+
+router.post("/editPlayer", function(req, res){
+     player.update("prating", req.body.prating ,req.body.playerid, function(data){
+          res.render('draftBoard');
+
      })
 })
 
