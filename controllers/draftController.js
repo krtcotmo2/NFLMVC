@@ -27,7 +27,7 @@ router.get("/", function(req, res){
 router.get("/addRinger", function(req, res){
      res.render("addRinger");
 })
-router.get("/editPlayer", git pull origin mafunction(req, res){
+router.get("/editPlayer", function(req, res){
      res.render("editPlayer");
 })
 
