@@ -35,19 +35,16 @@ router.get("/editPlayer", function(req, res){
           res.render("editPlayer", {players:data});
      })
 })
-
 router.post("/resetAll", function(req, res){
      player.resetAll(function(data){
           return res.send(data);
      })
 })
-
 router.post("/addRinger", function(req, res){
      player.addPlayer(["name", "prating", "position"], [req.body.name, req.body.prating, req.body.position], function(data){
           res.render('draftBoard');
      })
 })
-
 router.post("/editPlayer", function(req, res){
      player.update("prating", req.body.prating ,req.body.playerid, function(data){
           res.render('draftBoard');
