@@ -26,7 +26,7 @@
                </div>
                <div class="avPlayerScroller">
                     {{#each players }}
-                         <div class="playerHolder">   
+                         <div class="playerHolder avails" data-pos="{{position}}">   
                                <div class='deets'>
                                    <span class="playerName">{{name}}</span>
                                    <span class="pos">{{position}}</span>
@@ -43,7 +43,7 @@
                <div class="curSelection"></div>
                <button class="btn btn-secondary w-100 mb-4">Draft Player</button>
                {{#each draftOrder }}
-                    <div class="draftedHolder">   
+                    <div class="draftedHolder teamIcon" data-draftPos="{{draftOrder}}">   
                          <div class='deets'>
                               <img src="../public/assets/images/{{logo}}"/>
                               <span class="playerName">{{teamName}}</span>
@@ -54,9 +54,9 @@
           </div>
           <div class="colHolder col-4">
                <h1 style="margin-top:40px;">Drafted Players</h1>   
-               <div class="avPlayerScroller">            
+               <div class="avPlayerScroller drafterPlayers">            
                     {{#each drafted }}
-                         <div class="draftedHolder">   
+                         <div class="draftedHolder drafted">   
                                    <div class='deets'>
                                         {{#if draftedBy}}<img src="../public/assets/images/{{logo}}"/>{{/if}}
                                    <span class="playerName">{{name}}</span>
