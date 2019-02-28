@@ -7,7 +7,7 @@ const player = require("../models/player");
 
 //STANDARD HTML ROUTES
 router.get("/", function(req, res){
-     player.all("pickNum desc", function(data){
+     player.all("pickNum", function(data){
           let avail = data.filter( o=>{
                return o.draftedBy == null;
           })
