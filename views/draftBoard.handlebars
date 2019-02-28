@@ -26,7 +26,7 @@
                </div>
                <div class="avPlayerScroller">
                     {{#each players }}
-                         <div class="playerHolder avails" data-pos="{{position}}">   
+                         <div class="playerHolder avails" data-pos="{{position}}" data-playerid="{{playerid}}" >   
                                <div class='deets'>
                                    <span class="playerName">{{name}}</span>
                                    <span class="pos">{{position}}</span>
@@ -40,25 +40,24 @@
                <h1 style="margin-top:40px; text-align:center;">On the Clock</h1>
                <h3>Round: <spanc class="rndNum"></span></h3>
                <h5>Pick: <spanc class="pickNum"></span></h5>
-               <div class="curSelection"></div>
-               <button class="btn btn-secondary w-100 mb-4">Draft Player</button>
+               <div class="curSelection" data-playerid="1"></div>
+               <button class="btn btn-secondary w-100 mb-4" id="btnDraft">Draft Player</button>
                {{#each draftOrder }}
-                    <div class="draftedHolder teamIcon" data-draftPos="{{draftOrder}}">   
+                    <div class="draftedHolder teamIcon" style="display:none" data-draftPos="{{draftOrder}}" data-teamid="{{teamid}}">   
                          <div class='deets'>
-                              <img src="../public/assets/images/{{logo}}"/>
+                              <img src="../assets/images/{{logo}}"/>
                               <span class="playerName">{{teamName}}</span>
                          </div>                                                   
                     </div>
                {{/each}}
-               <button class="btnReset">Reset All</button>
           </div>
           <div class="colHolder col-4">
-               <h1 style="margin-top:40px;">Drafted Players</h1>   
+               <h1 style="margin-top:80px;">Drafted Players</h1>   
                <div class="avPlayerScroller drafterPlayers">            
                     {{#each drafted }}
                          <div class="draftedHolder drafted">   
                                    <div class='deets'>
-                                        {{#if draftedBy}}<img src="../public/assets/images/{{logo}}"/>{{/if}}
+                                        <img src="../assets/images/{{logo}}"/>
                                    <span class="playerName">{{name}}</span>
                                    <span class="pos">{{position}}</span>
                                    </div>                          
@@ -73,4 +72,4 @@
 <script src='https://code.jquery.com/jquery-3.3.1.min.js'
           integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous'></script>
      
-<script src="../public/assets/scripts/draftboard.js"></script>
+<script src="../assets/scripts/draftboard.js"></script>

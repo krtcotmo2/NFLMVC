@@ -1,8 +1,7 @@
 .nav-item{font-size: 1.4em}
 .colHolder{
      padding:12px;
-     height: calc(100vh - 86px);
-     
+     height: calc(100vh - 120px);
 }
 body, html{
      height: 100vh !important;
@@ -25,8 +24,10 @@ body, html{
      position: relative;
      display: flex;
      justify-content: space-between;
-     
      margin-bottom:12px;
+}
+.curSelection{
+     height:80px
 }
 .playerHolder:hover{
      cursor:pointer;
@@ -60,4 +61,11 @@ body, html{
 }
 .selected{
      background: #ccc
+}
+.picker{
+     border: 2px solid red;
+     background: url(../images/pointer.png), url(../images/pointerRt.png);
+     background-repeat: no-repeat, no-repeat;
+     background-position: 0px 50%, 100% 50%;
+     cursor:pointer;
 }

@@ -1,5 +1,5 @@
 $(".editPlayer").on("submit", function(evt){
-     event.preventDefault();
+     evt.preventDefault();
      vals = {
           name: $("#tboxName").val().trim(),
           prating: $("#tboxRating").val().trim(),
@@ -10,7 +10,10 @@ $(".editPlayer").on("submit", function(evt){
      $.ajax("/editPlayer",{
           type:"POST",
           data: vals
-     }).catch(function(err){
+     }).then(function(data){
+          window.location="/";
+     })
+     .catch(function(err){
           console.log(err);
      })
 });
@@ -31,7 +34,15 @@ $("#cboxPlayer").change(function(evt){
      .catch(function(err){
           console.log(err);
      })
-
-
-   
 })
+
+//REMOVES ALL DRAFT CHOICES AND PLACES THEM BACK TO UNDRAFTED
+$(".btnReset").on("click", function(){
+     $.ajax("/resetAll",{
+          type:"POST"
+     }).then(function(data){
+          console.log(data);
+          window.location = "/";
+     });
+});
+
