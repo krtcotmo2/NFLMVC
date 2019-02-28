@@ -27,10 +27,14 @@ let player = {
           });       
      },
      update:function(cols, vals, playerid, cb){
-          console.log(cols,vals,playerid )
           orm.update("players", cols, vals, playerid, function(res){
                cb(res);
           });
+     },
+     draftPlayer:function(pid, tid, pickNum, cb){
+          orm.draftPlayer(pid, tid, pickNum, function(results){
+               cb(results);
+          } )
      }
 }
 module.exports = player;

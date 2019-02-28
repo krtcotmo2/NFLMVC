@@ -20,7 +20,7 @@ let orm = {
           })
      }, 
      resetAll : function(tableName , columnName, val, cb){
-          let query =   `UPDATE ${tableName} SET ${columnName} = ${val}`;
+          let query =   `UPDATE ${tableName} SET ${columnName} = ${val}, pickNum = NULL`;
           connection.query(query, function(err, data){
                if(err) throw err;
                cb(data);
@@ -53,6 +53,18 @@ let orm = {
           connection.query(query, function(err, data){
                if(err) throw err;
                cb(data);
+          })
+     },
+     draftPlayer:function(pid, tid, pickNum, cb){
+          let query = `UPDATE players SET draftedBy = ${tid}, pickNum = ${pickNum} WHERE playerid = ${pid}`;
+          connection.query(query, function(err, data){
+               if(err) throw err;
+               query = `SELECT logo FROM teams WHERE teamid = ${tid};`;
+               connection.query(query, function(err, data){
+                    if(err) throw err;
+                    cb(data);
+               })
+               
           })
      }
 }
