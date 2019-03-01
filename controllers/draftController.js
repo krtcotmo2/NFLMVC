@@ -52,6 +52,7 @@ router.post("/addRinger", function(req, res){
      })
 })
 router.post("/editPlayer", function(req, res){
+     //would this be better to have the id be a paramter in the api call /editPlayer/:id
      player.update("prating", req.body.prating ,req.body.playerid, function(data){
           res.json(data);
      })
