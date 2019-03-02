@@ -78,3 +78,9 @@ body{background:url(../images/fieldBk.png)}
 .contianer, .fieldOfPlay{height:100%; min-height:100%, }
 .fieldOfPlay{background:rgba(255,255,255,0.7)}
 .filterHolder{background:none;}
+
+.addPlayer, .editPlayer{
+     background:rgba(255,255,255,0.6);
+     border-radius: 3px;
+     padding:18px;
+}
