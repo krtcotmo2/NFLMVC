@@ -6,8 +6,9 @@ $(".editPlayer").on("submit", function(evt){
           position: $("#cboxPos option:selected").text(),
           playerid: $("#cboxPlayer option:selected").val()
      };
-     console.log(vals)
-     $.ajax("/editPlayer",{
+     
+     
+     $.ajax("/editPlayer/"+vals.playerid,{
           type:"POST",
           data: vals
      }).then(function(data){
@@ -16,6 +17,7 @@ $(".editPlayer").on("submit", function(evt){
      .catch(function(err){
           console.log(err);
      })
+     
 });
 
 $("#cboxPlayer").change(function(evt){
