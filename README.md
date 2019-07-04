@@ -1,4 +1,4 @@
-# NFLMVC
+# [NFL MVC](https://nfldraft-krc.herokuapp.com/) 
 ![alt text](https://img.shields.io/badge/uses-Node-brightgreen.svg) ![alt text](https://img.shields.io/badge/uses-Express-brightgreen.svg) ![alt text](https://img.shields.io/badge/uses-MySql-brightgreen.svg) 
 
 ![alt text](https://img.shields.io/badge/uses-Handlebars-blue.svg)  ![alt text](https://img.shields.io/badge/uses-Bootstrap-blue.svg) ![alt text](https://img.shields.io/badge/uses-jQuery-blue.svg) 
@@ -21,3 +21,5 @@ if (process.env.JAWSDB_URL) {
 ```
 
 The routing api allows for sql to save and update user data. Js also controls the draft order, counts the number of picks, anyone drafted get removed from available and placed in the drafted side with the appropriate team logo. The db allows the draft to resume at any time.
+
+#### [Page Details](https://github.com/krtcotmo2/NFLMVC/blob/master/pageDetails.md)
