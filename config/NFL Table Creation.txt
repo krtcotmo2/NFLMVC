@@ -1,0 +1,19 @@
+CREATE TABLE `players` (
+  `playerid` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `position` varchar(5) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `prating` int(11) DEFAULT NULL,
+  `draftedBy` int(11) DEFAULT NULL,
+  `pickNum` int(11) DEFAULT NULL,
+  PRIMARY KEY (`playerid`)
+) ENGINE=InnoDB AUTO_INCREMENT=230 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+CREATE TABLE `teams` (
+  `teamid` int(11) NOT NULL AUTO_INCREMENT,
+  `teamName` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
+  `draftOrder` int(11) NOT NULL,
+  `logo` varchar(60) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`teamid`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`okihbb6lagcfvv86`@`%` SQL SECURITY DEFINER VIEW `v_player_draft` AS select `players`.`name` AS `name`,`players`.`playerid` AS `playerid`,`players`.`position` AS `position`,`players`.`pickNum` AS `pickNum`,`players`.`prating` AS `prating`,`players`.`draftedBy` AS `draftedBy`,`teams`.`teamName` AS `teamName`,`teams`.`logo` AS `logo` from (`players` left join `teams` on((`teams`.`teamid` = `players`.`draftedBy`))) order by `players`.`pickNum` desc;
