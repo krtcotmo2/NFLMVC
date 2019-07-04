@@ -4,7 +4,7 @@
 ![alt text](https://img.shields.io/badge/uses-Handlebars-blue.svg)  ![alt text](https://img.shields.io/badge/uses-Bootstrap-blue.svg) ![alt text](https://img.shields.io/badge/uses-jQuery-blue.svg) 
 
 # The Application
-This exercise was designed to give me experience with MVC development and while querying larger sets of data from mySql. The application is a basic mock draft where there is a list of potential candidates in one list, a set of teams in a very specific order in another list. The user selects the player they wish to draft and then click on the Draft Player button. Drafting the player removes then from the available player list and adds them to a drafted list. The team list updates and the draft counties with the next team.
+This exercise was designed to give me experience with MVC development while querying larger sets of data from mySql. The application is a basic mock draft where there is a list of potential candidates in one list, a set of teams in a very specific order in another list. The user selects the player they wish to draft and then click on the Draft Player button. Drafting the player removes then from the available player list and adds them to a drafted list. The team list updates and the draft counties with the next team.
 
 I added a Add a Ringer feature where the user can create a new player for any position with any rating score. I also made it possible to modify the payer rating after they have been created.
 # How I built it
