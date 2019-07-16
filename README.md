@@ -23,6 +23,7 @@ if (process.env.JAWSDB_URL) {
 The routing api allows for sql to save and update user data. Js also controls the draft order, counts the number of picks, anyone drafted get removed from available and placed in the drafted side with the appropriate team logo. The db allows the draft to resume at any time.
 
 ## Draft Board
+[<img align="center" src="https://github.com/krtcotmo2/NFLMVC/blob/master/public/assets/images/draft.png">](https://nfldraft-krc.herokuapp.com/)
 #### On Page load
 
 - Connect to sql db and get all teams by draft order
