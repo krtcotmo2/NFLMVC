@@ -53,7 +53,8 @@ Don't like what you see left on the board. Go to this page to add a custom playe
 - redirect to the draft board
 
 ## Update a Player Page
-[<img align="center" src="https://github.com/krtcotmo2/NFLMVC/blob/master/public/assets/images/editplayer.png">](https://nfldraft-krc.herokuapp.com/)
+[<img align="right" src="https://github.com/krtcotmo2/NFLMVC/blob/master/public/assets/images/editplayer.png">](https://nfldraft-krc.herokuapp.com/)
+
 So you didn't get the player you wanted because your rival drafted them first, pull a fast one and change the rating of the player
 
 - Page shows list of drafted players
